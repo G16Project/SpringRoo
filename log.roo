@@ -8,3 +8,13 @@ entity jpa --class ~.entity.RequisitionAllowance --testAutomatically
 field date --fieldName dateWork --type java.util.Date
 quit
 // Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2012-02-16 21:54:08
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log opened at 2555-02-16 21:59:51
+enum type --class ~.entity.EPositions
+enum constant --name Employee
+enum constant --name Finance_Department
+enum constant --name Head_Finance_Department
+enum constant --name Head_Human_Department
+enum constant --name Head_Section
+enum constant --name Manager
+quit
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2555-02-16 22:03:09
