@@ -76,3 +76,15 @@ field boolean --fieldName approvedByHead_Finance_Departm
 field boolean --fieldName approvedByManager
 quit
 // Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2555-02-16 23:31:06
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log opened at 2555-02-16 23:40:43
+entity jpa  --class ~.entity.TransferOfFunds
+field reference --fieldName idNameSender --type ~.domain.Employee
+field enum --fieldName PositionSender --type ~.entity.ePosition
+field reference --fieldName IdNameReceiver --type ~.domain.Employee
+field enum --fieldName PositionReceiver --type ~.entity.ePosition
+field enum --fieldName welfare --type ~.entity.welfare
+field number --fieldName money --type java.lang.Float
+field string --fieldName AccountId --notNull
+field boolean --fieldName Approve
+quit
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2555-02-16 23:45:47
