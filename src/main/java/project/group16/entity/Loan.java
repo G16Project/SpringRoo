@@ -6,6 +6,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
@@ -15,25 +16,34 @@ import project.group16.domain.Employee;
 @RooJavaBean
 @RooToString
 @RooJpaActiveRecord
-public class FinanceDepertment {
+public class Loan {
 
     @ManyToOne
-    private Employee Information;
+    private Employee information;
 
     @Enumerated
     private EPosition ePosition;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date startJob;
+    @Size(max = 500)
+    private String address;
 
-    @Enumerated
-    private TimeForJob timeForJob;
-
-    private Float Bonuses;
+    @NotNull
+    private String moneyLoan;
 
     @NotNull
     private String accountNumber;
+
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(style = "M-")
+    private Date dateLoan;
+
+    @NotNull
+    private String reason;
+
+    private Boolean approvedByFinance_Department;
+
+    private Boolean approvedByHead_Finance_Departm;
 
     private Boolean approvedByManager;
 }

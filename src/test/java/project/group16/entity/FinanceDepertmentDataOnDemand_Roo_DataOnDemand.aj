@@ -5,14 +5,20 @@ package project.group16.entity;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 import org.springframework.stereotype.Component;
+import project.group16.domain.Employee;
+import project.group16.entity.EPosition;
 import project.group16.entity.FinanceDepertment;
 import project.group16.entity.FinanceDepertmentDataOnDemand;
+import project.group16.entity.TimeForJob;
 
 privileged aspect FinanceDepertmentDataOnDemand_Roo_DataOnDemand {
     
@@ -24,7 +30,49 @@ privileged aspect FinanceDepertmentDataOnDemand_Roo_DataOnDemand {
     
     public FinanceDepertment FinanceDepertmentDataOnDemand.getNewTransientFinanceDepertment(int index) {
         FinanceDepertment obj = new FinanceDepertment();
+        setAccountNumber(obj, index);
+        setApprovedByManager(obj, index);
+        setBonuses(obj, index);
+        setEPosition(obj, index);
+        setInformation(obj, index);
+        setStartJob(obj, index);
+        setTimeForJob(obj, index);
         return obj;
+    }
+    
+    public void FinanceDepertmentDataOnDemand.setAccountNumber(FinanceDepertment obj, int index) {
+        String accountNumber = "accountNumber_" + index;
+        obj.setAccountNumber(accountNumber);
+    }
+    
+    public void FinanceDepertmentDataOnDemand.setApprovedByManager(FinanceDepertment obj, int index) {
+        Boolean approvedByManager = Boolean.TRUE;
+        obj.setApprovedByManager(approvedByManager);
+    }
+    
+    public void FinanceDepertmentDataOnDemand.setBonuses(FinanceDepertment obj, int index) {
+        Float Bonuses = new Integer(index).floatValue();
+        obj.setBonuses(Bonuses);
+    }
+    
+    public void FinanceDepertmentDataOnDemand.setEPosition(FinanceDepertment obj, int index) {
+        EPosition ePosition = EPosition.class.getEnumConstants()[0];
+        obj.setEPosition(ePosition);
+    }
+    
+    public void FinanceDepertmentDataOnDemand.setInformation(FinanceDepertment obj, int index) {
+        Employee Information = null;
+        obj.setInformation(Information);
+    }
+    
+    public void FinanceDepertmentDataOnDemand.setStartJob(FinanceDepertment obj, int index) {
+        Date startJob = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
+        obj.setStartJob(startJob);
+    }
+    
+    public void FinanceDepertmentDataOnDemand.setTimeForJob(FinanceDepertment obj, int index) {
+        TimeForJob timeForJob = TimeForJob.class.getEnumConstants()[0];
+        obj.setTimeForJob(timeForJob);
     }
     
     public FinanceDepertment FinanceDepertmentDataOnDemand.getSpecificFinanceDepertment(int index) {

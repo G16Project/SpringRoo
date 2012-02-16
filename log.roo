@@ -53,3 +53,26 @@ enum constant --name time_3_to_6_years
 enum constant  --name time_more_6_years
 
 
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log opened at 2555-02-16 23:24:34
+entity jpa --class ~.entity.FinanceDepertment --testAutomatically
+field reference --fieldName Information --type ~.domain.Employee
+field enum --fieldName ePosition --type ~.entity.ePosition
+field date --fieldName startJob --type java.util.Date
+field enum --fieldName timeForJob --type ~.entity.timeForJob
+field number --fieldName Bonuses --type java.lang.Float
+field string --fieldName accountNumber --notNull
+field boolean --fieldName approvedByManager
+entity jpa --class ~entity.Loan
+field reference --fieldName information --type ~.domain.Employee
+field enum --fieldName ePosition --type ~.entity.ePosition
+field string --fieldName address --sizeMax 500
+field string --fieldName moneyLoan --notNull
+field string --fieldName accountNumber --notNull
+// [failed] field string --fieldName accountNumber --notNull
+field date --fieldName dateLoan --type java.util.Date --notNull
+field string --fieldName reason --notNull
+field boolean --fieldName approvedByFinance_Department
+field boolean --fieldName approvedByHead_Finance_Departm
+field boolean --fieldName approvedByManager
+quit
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2555-02-16 23:31:06
