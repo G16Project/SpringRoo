@@ -28,3 +28,15 @@ entity jpa --class ~.entity.TransferOfFunds
 // [failed] field reference --fieldName idNameSender --type ~.domain.Employee
 quit
 // Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2555-02-16 22:28:09
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log opened at 2555-02-16 22:49:04
+enum type --class ~.entity.Rescue
+enum constant --name Accidents
+enum constant --name Death
+enum constant --name Natural_Disaster
+enum type --class ~.entity.TypeOfLeave
+enum constant --name Sick_Leave
+enum constant --name Business_Leave
+entity jpa --class ~.entity.FinanceDepertment --testAutomatically
+// [failed] field reference --fieldName Information --type ~.domain.Employee
+quit
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2555-02-16 22:52:52
