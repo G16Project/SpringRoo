@@ -30,6 +30,7 @@ enum constant --name Rescue_Leave
 entity jpa --class ~.entity.FinanceDepartment --testAutomatically 
 
 
+
 enum type --class ~.entity.Rescue
 enum constant --name Accidents
 enum constant --name Death
@@ -37,4 +38,7 @@ enum constant --name Natural_Disaster
 enum type --class ~.entity.TypeOfLeave
 enum constant --name Sick_Leave
 enum constant --name Business_Leave
+
+
+
 
