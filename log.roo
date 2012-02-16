@@ -1,0 +1,5 @@
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log opened at 2555-02-16 21:43:36
+project --topLevelPackage project.group16
+persistence setup --provider HIBERNATE --database H2_IN_MEMORY 
+quit
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2555-02-16 21:44:23
