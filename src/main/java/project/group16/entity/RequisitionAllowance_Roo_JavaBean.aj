@@ -16,4 +16,12 @@ privileged aspect RequisitionAllowance_Roo_JavaBean {
         this.dateWork = dateWork;
     }
     
+    public String RequisitionAllowance.getTimeWork() {
+        return this.timeWork;
+    }
+    
+    public void RequisitionAllowance.setTimeWork(String timeWork) {
+        this.timeWork = timeWork;
+    }
+    
 }

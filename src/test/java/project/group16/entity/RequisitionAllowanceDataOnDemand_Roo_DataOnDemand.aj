@@ -28,12 +28,18 @@ privileged aspect RequisitionAllowanceDataOnDemand_Roo_DataOnDemand {
     public RequisitionAllowance RequisitionAllowanceDataOnDemand.getNewTransientRequisitionAllowance(int index) {
         RequisitionAllowance obj = new RequisitionAllowance();
         setDateWork(obj, index);
+        setTimeWork(obj, index);
         return obj;
     }
     
     public void RequisitionAllowanceDataOnDemand.setDateWork(RequisitionAllowance obj, int index) {
         Date dateWork = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
         obj.setDateWork(dateWork);
+    }
+    
+    public void RequisitionAllowanceDataOnDemand.setTimeWork(RequisitionAllowance obj, int index) {
+        String timeWork = "timeWork_" + index;
+        obj.setTimeWork(timeWork);
     }
     
     public RequisitionAllowance RequisitionAllowanceDataOnDemand.getSpecificRequisitionAllowance(int index) {

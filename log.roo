@@ -8,3 +8,8 @@ entity jpa --class ~.entity.RequisitionAllowance --testAutomatically
 field date --fieldName dateWork --type java.util.Date
 quit
 // Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2012-02-16 21:54:08
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log opened at 2012-02-16 21:58:14
+focus --class ~.entity.RequisitionAllowance 
+field string --fieldName timeWork --notNull --sizeMin 2
+quit
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2012-02-16 22:00:08
