@@ -1,11 +1,7 @@
 package project.group16.entity;
 
-import org.springframework.roo.addon.javabean.RooJavaBean;
-import org.springframework.roo.addon.jpa.activerecord.RooJpaActiveRecord;
-import org.springframework.roo.addon.tostring.RooToString;
 
-@RooJavaBean
-@RooToString
-@RooJpaActiveRecord
-public class TimeForJob {
+public enum TimeForJob {
+
+    time_1_to_3_months, time_3_to_6_months, time_1_year, time_1_to_3_years, time_3_to_6_years, time_more_6_years;
 }

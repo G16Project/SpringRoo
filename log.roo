@@ -31,6 +31,7 @@ entity jpa --class ~.entity.FinanceDepartment --testAutomatically
 
 
 
+
 enum type --class ~.entity.Rescue
 enum constant --name Accidents
 enum constant --name Death
@@ -40,5 +41,15 @@ enum constant --name Sick_Leave
 enum constant --name Business_Leave
 
 
+
+
+
+enum type --class ~.entity.timeForJob
+enum constant --name time_1_to_3_months
+enum constant --name time_3_to_6_months
+enum constant --name time_1_year
+enum constant --name time_1_to_3_years
+enum constant --name time_3_to_6_years
+enum constant  --name time_more_6_years
 
 
