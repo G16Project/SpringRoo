@@ -36,3 +36,13 @@ quit
 entity jpa --class ~.entity.timeForJob
 quit
 // Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2012-02-16 22:54:31
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log opened at 2012-02-16 22:59:23
+enum type --class ~.entity.timeForJob
+enum constant --name time_1_to_3_months
+enum constant --name time_3_to_6_months
+enum constant --name time_1_year
+enum constant --name time_1_to_3_years
+enum constant --name time_3_to_6_years
+enum constant  --name time_more_6_years
+quit
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2012-02-16 23:03:29
