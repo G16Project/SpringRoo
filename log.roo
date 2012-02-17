@@ -28,3 +28,7 @@ enum constant --name Loan
 enum constant --name Rescue_Leave
 
 
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log opened at 2012-02-16 22:31:55
+entity jpa --class ~.entity.FinanceDepartment --testAutomatically 
+quit
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log closed at 2012-02-16 22:34:31
