@@ -1,12 +1,6 @@
 project --topLevelPackage project.group16
 persistence setup --provider HIBERNATE --database H2_IN_MEMORY 
 
-entity jpa --class ~.entity.RequisitionAllowance --testAutomatically 
-field date --fieldName dateWork --type java.util.Date
-
-focus --class ~.entity.RequisitionAllowance 
-field string --fieldName timeWork --notNull --sizeMin 2
-
 enum type --class ~.entity.EPositions
 enum constant --name Employee
 enum constant --name Finance_Department
@@ -27,11 +21,6 @@ enum constant --name Requisition_Allowance
 enum constant --name Loan
 enum constant --name Rescue_Leave
 
-entity jpa --class ~.entity.FinanceDepartment --testAutomatically 
-
-
-
-
 enum type --class ~.entity.Rescue
 enum constant --name Accidents
 enum constant --name Death
@@ -39,10 +28,6 @@ enum constant --name Natural_Disaster
 enum type --class ~.entity.TypeOfLeave
 enum constant --name Sick_Leave
 enum constant --name Business_Leave
-
-
-
-
 
 enum type --class ~.entity.timeForJob
 enum constant --name time_1_to_3_months
